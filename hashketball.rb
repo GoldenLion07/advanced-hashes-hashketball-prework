@@ -139,7 +139,7 @@ end
 
 shoe_size("Ben Gordon")
 
-def team_stats 
+def player_stats 
   home_team = game_hash.values_at(:home)
   away_team = game_hash.values_at(:away)
   total_team_stats = home_team + away_team
