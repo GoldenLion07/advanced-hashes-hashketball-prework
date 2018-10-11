@@ -120,15 +120,11 @@ def num_points_scored(player_name)
 find_player(player_name)[:points]
 end
 
-def find_player(player_name)
+def players
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
-  
-  all_players = home_players.merge(away_players) #combines hash
-  
-  all_players[player_name]
-  
-  
+  total_players = home_players + away_players
+  total_players
 end
 
 def shoe_size(name)
