@@ -115,14 +115,7 @@ def game_hash
   }
 end
  
- def players
-  home_players = game_hash[:home][:players]
-  away_players = game_hash[:away][:players]
-  total_players = home_players + away_players
-  total_players
-end
- 
-def num_points_scored(name)
+ def num_points_scored(name)
   hash = game_hash
   hash.each do |location, info| 
     info.each do |attribute, stuff| 
@@ -132,11 +125,6 @@ def num_points_scored(name)
     end
   end
 end
-
-def shoe_size(name)
-  find_shoe = players.find {|player| player.fetch(:player_name) == name }
-  find_shoe.fetch(:shoe)
-end 
 
 def team_names
   hash = game_hash
