@@ -145,23 +145,23 @@ def player_stats
   total_player_stats = home_team + away_team
   total_player_stats
 end 
-team_stats 
+player_stats 
 
 def team_colors(team_name)
-  find_team = team_stats.find {|team| team.fetch(:team_name) == team_name}
+  find_team = player_stats.find {|team| team.fetch(:team_name) == team_name}
   find_team.fetch(:colors)
 end 
 team_colors("Brooklyn Nets")
 
 def team_names 
-  team_stats.collect do |team|
+  player_stats.collect do |team|
     team[:team_name]
   end 
 end 
 team_names 
 
 def player_numbers(team_name)
-  find_numbers = team_stats.find {|team| team.fetch(:team_name) == team_name}
+  find_numbers = player_stats.find {|team| team.fetch(:team_name) == team_name}
   find_numbers[:players].collect do |player| 
     player[:number]
   end 
