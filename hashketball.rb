@@ -131,7 +131,7 @@ def find_player(player_name)
   
 end
 
-ef shoe_size(name)
+def shoe_size(name)
   find_shoe = players.find {|player| player.fetch(:player_name) == name }
   find_shoe.fetch(:shoe)
 end 
