@@ -126,6 +126,25 @@ end
   end
 end
 
+def shoe_size(player)
+  array2 = []
+  game_hash.each do |location, team_data|
+      team_data.each do |attribute, values|
+          if attribute == :players
+            values.each do |person, data|
+              data.each do |i, j|
+                if person == player && i == :shoe
+                  array2.push(j)
+                end
+
+              end
+            end
+          end
+      end
+  end
+  return array2[0]
+end
+
 def team_names
   hash = game_hash
   array = []
