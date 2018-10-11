@@ -116,15 +116,15 @@ def game_hash
     }
 end
 
-def num_points_scored(player_name)
-find_player(player_name)[:points]
-end
-
 def players
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
   total_players = home_players + away_players
   total_players
+end
+
+def num_points_scored(player_name)
+find_player(player_name)[:points]
 end
 
 def shoe_size(name)
