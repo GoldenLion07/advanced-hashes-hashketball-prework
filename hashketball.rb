@@ -131,20 +131,7 @@ def find_player(player_name)
   
 end
 
-def winning_team
-  home_players_points = game_hash[:home][:players][:points]
-  away_players_points = game_hash[:away][:players][:points]
-  
-  if home_players_points.sum > away_players_points.sum
-    return game_hash[:home]
-  elsif home_players_points.sum = away_players_points.sum
-    return "A tie"
-  else
-    return game_hash[:away]
-  end
-end
 
-winning_team
 
 
 
