@@ -126,6 +126,11 @@ def num_points_scored(name)
   end
 end
 
+def shoe_size(name)
+  find_shoe = players.find {|player| player.fetch(:player_name) == name }
+  find_shoe.fetch(:shoe)
+end 
+
 def team_names
   hash = game_hash
   array = []
